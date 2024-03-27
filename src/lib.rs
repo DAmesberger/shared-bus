@@ -95,12 +95,10 @@
 //! | --- | --- | --- | --- |
 //! | I2C | [`I2cProxy`] | [`.acquire_i2c()`] | |
 //! | SPI | [`SpiProxy`] | [`.acquire_spi()`] | SPI can only be shared within a single task (See [`SpiProxy`] for details). |
-//! | ADC | [`AdcProxy`] | [`.acquire_adc()`] | |
 //!
 //!
 //! [`.acquire_i2c()`]: ./struct.BusManager.html#method.acquire_i2c
 //! [`.acquire_spi()`]: ./struct.BusManager.html#method.acquire_spi
-//! [`.acquire_adc()`]: ./struct.BusManager.html#method.acquire_adc
 //! [`BusManagerCortexM`]: ./type.BusManagerCortexM.html
 //! [`BusManagerXtensa`]: ./type.BusManagerXtensa.html
 //! [`BusManagerAtomicCheck`]: ./type.BusManagerAtomicCheck.html
@@ -109,7 +107,6 @@
 //! [`BusMutex`]: ./trait.BusMutex.html
 //! [`I2cProxy`]: ./struct.I2cProxy.html
 //! [`SpiProxy`]: ./struct.SpiProxy.html
-//! [`AdcProxy`]: ./struct.AdcProxy.html
 //! [`new_cortexm!()`]: ./macro.new_cortexm.html
 //! [`new_xtensa!()`]: ./macro.new_xtensa.html
 //! [`new_std!()`]: ./macro.new_std.html
@@ -143,7 +140,6 @@ pub use mutex::CortexMMutex;
 pub use mutex::NullMutex;
 #[cfg(feature = "xtensa")]
 pub use mutex::XtensaMutex;
-pub use proxies::AdcProxy;
 pub use proxies::I2cProxy;
 pub use proxies::SpiProxy;
 
